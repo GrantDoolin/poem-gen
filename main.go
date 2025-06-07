@@ -39,7 +39,7 @@ func main() {
 	message := gomail.NewMessage()
 
 	message.SetHeader("From", getEnv("sender"))
-	message.SetHeader("To", getEnv("sender"))
+	message.SetHeader("To", getEnv("reciever"))
 	message.SetHeader("Subject", getEnv("subject"))
 
 	message.SetBody("text/plain", resp.Choices[0].Message.Content)
